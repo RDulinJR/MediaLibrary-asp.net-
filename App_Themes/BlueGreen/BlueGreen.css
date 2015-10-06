@@ -1,0 +1,151 @@
+﻿
+h1{
+	font:bold 20px Tahoma;
+}
+li{
+	list-style:none;
+}
+header, section, footer, nav, article{
+	display:flex;
+	justify-content:center;
+}
+body{
+	text-align:center;
+	background:#1FC7FF;
+    height:70%;
+}
+#form1{
+	margin:20px 10%;
+}
+#banner{
+	background:#1FC7FF;
+	color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px green, 0 0 5px #A3E629;
+	border:1px solid black;
+	padding:20px;
+}
+#nav_menu{
+	background:#A3E629;
+	width:100%;
+	display:table;
+	table-layout:fixed;
+}
+#nav_menu ul{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-around;
+	margin:5px;
+	padding:10px auto;
+}
+#nav_menu ul li{
+	text-align:center;
+	border:1px solid #1FC7FF;
+	border-radius:25px;
+	padding:10px auto;
+}
+#nav_menu ul li a{
+	display:block;
+	padding: 10px 40px;
+	color:white;
+	text-decoration:none;
+	font:bold 14px Tahoma;
+	transition: color 2s, font 2s;
+}
+#nav_menu ul li a:hover{
+	color:#1FC7FF;
+	text-transform:uppercase;
+	font: bold 125% Trebuchet MS;
+}
+#section{
+	flex-direction:column;
+}
+article{
+	flex-direction:column;
+	flex-grow:1;
+	background: white;
+	border: 5px solid rgba(0,0,0,.7);
+	border-radius:25px;
+	padding:20px;
+	margin:10px;
+}
+header{
+	flex-direction:column;
+}
+#bottom_part{
+	background:ghostwhite;
+	padding:20px;
+	border-top:2px solid black;
+}
+.library{
+    overflow:hidden;
+    margin:10px;
+}
+.poster{
+    float:left;
+    position:relative;
+    width:20%;
+    padding-bottom:20%;
+}
+.posterInner{
+    position:absolute;
+    left:10px;
+    right:10px;
+    top:10px;
+    bottom:10px;
+    overflow:hidden;
+}
+.posterInner img{
+    width:75%;
+    height:100%;
+}
+.posterInner .posterTitle{
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    margin-bottom:-50px;
+    background:rgba(31,199,255, 0.5);
+    color:#A3E629;
+    padding:10px;
+    padding-left: 30px;
+    padding-right:30px;
+    text-align:center;
+    transition: all .3s ease-out;
+}
+body.no-touch .posterInner:hover .posterTitle, body.touch .posterInner.touchFocus .posterTitle {
+   margin-bottom: 0;
+}
+@media only screen and (max-width : 480px) {
+   /* Smartphone view: 1 tile */
+   .poster {
+      width: 100%;
+      padding-bottom: 100%;
+   }
+}
+@media only screen and (max-width : 650px) and (min-width : 481px) {
+   /* Tablet view: 2 tiles */
+   .poster {
+      width: 50%;
+      padding-bottom: 50%;
+   }
+}
+@media only screen and (max-width : 1050px) and (min-width : 651px) {
+   /* Small desktop / ipad view: 3 tiles */
+   .poster {
+      width: 33.3%;
+      padding-bottom: 33.3%;
+   }
+}
+@media only screen and (max-width : 1290px) and (min-width : 1051px) {
+   /* Medium desktop: 4 tiles */
+   .poster {
+      width: 25%;
+      padding-bottom: 25%;
+   }
+}
+@media only screen and (min-width : 1291px){
+    .poster{
+        width:20%;
+        padding-bottom:20%;
+    }
+}

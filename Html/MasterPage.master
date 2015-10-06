@@ -1,0 +1,53 @@
+﻿<%@ Master Language="C#" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<script runat="server">
+
+</script>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Media Library</title>
+    <meta charset="utf-8" />
+    <script src="../Scripts/jquery-1.11.3.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="no-touch">
+    <form id="form1" runat="server">
+        <div id="container">
+            <header id="banner">
+                <h1>This is the header</h1>
+            </header>
+            <div id="welcome">
+                Welcome
+            <asp:Label ID="Label1" runat="server"></asp:Label>
+                &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">Login</asp:LinkButton>
+                &nbsp;
+                <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Logout</asp:LinkButton>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:DropDownList ID="ListThm" runat="server" OnSelectedIndexChanged="ListThm_SelectedIndexChanged" AutoPostBack="True">
+                <asp:ListItem>BlueGreen</asp:ListItem>
+                <asp:ListItem>BlackRed</asp:ListItem>
+                <asp:ListItem>GrassyGreen</asp:ListItem>
+            </asp:DropDownList>
+
+            </div>
+            <nav id="nav_menu">
+                <ul>
+                    <li><a href="Default.aspx">Home</a></li>
+                    <li><a href="AddMovie.aspx">Add Movie</a></li>
+                    <li><a href="Library.aspx">Library</a></li>
+                </ul>
+            </nav>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <footer id="bottom_part">
+                Footer
+            </footer>
+        </div>
+    </form>
+</body>
+</html>
